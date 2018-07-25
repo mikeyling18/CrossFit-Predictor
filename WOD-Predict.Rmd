@@ -1,0 +1,19 @@
+---
+title: "WOD-Predict"
+author: "Mikey Ling"
+date: "July 25, 2018"
+output: html_document
+---
+
+## R Markdown
+
+```{r}
+library(xlsx)
+```
+
+
+```{r}
+df <- read.xlsx("C:/Users/212475369/Desktop/WOD-Predict/PerformanceResultsMetcons.xlsx",1)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
