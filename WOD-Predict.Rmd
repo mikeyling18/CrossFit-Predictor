@@ -9,11 +9,42 @@ output: html_document
 
 ```{r}
 library(xlsx)
+library(stringi)
+library(tibble)
 ```
 
-
+Read in the Excel File
 ```{r}
 df <- read.xlsx("C:/Users/212475369/Desktop/WOD-Predict/PerformanceResultsMetcons.xlsx",1)
 ```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+Find any description that contains "AMRAP"
+1)
+```{r}
+workout_type <- "AMRAP"
+df_amrap <- df[grepl(workout_type,df$Result.Type.Label),]
+cat("Found ", dim(df_amrap)[1], " ", workout_type, " workouts out of ", dim(df)[1], " total workouts", end="\n", file="")
+```
+
+1A) which WOD Descriptions have "minute" in it
+```{r}
+df_1a <- df_amrap
+df_1a <- as.data.frame(append(df_1a, list(time=NA), after=2))
+df_1a <- as.data.frame(append(df_1a, list(minutes=0), after=2))
+df_1a$time <-grepl('(?i)minute', df_1a$Component.Description)
+
+```
+
+1B) get minute value
+```{r}
+df_1b <- df_1a
+df_1b$minutes[df_1b$time==TRUE] <- gsub(" ?(?i)minute.*$", "", df_1b$Component.Description[df_1a$time==TRUE])
+```
+
+
+```{r}
+test <- "20 minute amrap of: my butt"
+results  <- gsub(" minute.*$", "\\1", test)
+print(results)
+```
+
