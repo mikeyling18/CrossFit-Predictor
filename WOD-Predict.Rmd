@@ -11,6 +11,7 @@ output: html_document
 library(xlsx)
 library(stringi)
 library(tibble)
+library(stringr)
 ```
 
 Read in the Excel File
@@ -41,10 +42,33 @@ df_1b <- df_1a
 df_1b$minutes[df_1b$time==TRUE] <- gsub(" ?(?i)minute.*$", "", df_1b$Component.Description[df_1a$time==TRUE])
 ```
 
+1C) get Wall Ball count 
+```{r}
+df_1c <- df_1a
+df_1c <- as.data.frame(append(df_1c, list(wb=0), after=2))
+df_1c$wb <- grepl('(?i)wall',df_1c$Component.Description)
+df_1c$wb[df_1c$wb==TRUE] <- gsub(" (?i)wall.*$", "\\1", df_1c$Component.Description[df_1c$wb==TRUE])
+df_1c$wb[df_1c$wb!=FALSE] <- word(df_1c$wb[df_1c$wb!=FALSE], -1)
+df_1c$minutes[df_1c$wb != FALSE] <-
+# df_1c$wb[df_1c$wb!=FALSE] <- str_extract_all(df_1c$wb, "[0-9]+")
+# df_1c <- as.data.frame(append(df_1c, list(wb_reps=NA), after=2))
+# df_1c$wb_reps<- strsplit(toString(df_1c$Component.Description)," ")
+# df_1c$wb_reps[df_1c$wb == TRUE] <- sapply(strsplit(as.character(df_1c$Component.Description[df_1c$wb==TRUE]), "\\."), function(x) x[[1]])
+# hehe <-  strsplit(as.character(df_1c$wb[df_1c$wb!=FALSE]), " ")
+# df_1c$wb_reps[df_1c$wb != FALSE] <- strsplit(as.character(df_1c$wb[df_1c$wb!=FALSE]), " ")
+# unlist(df_1c$wb_reps)
+# df_1c$wb_reps[!(is.na(df_1c$wb_reps))] <- df_1c$wb_reps[!(is.na(df_1c$wb_reps))]
+
+
+# sapply(strsplit(as.character(df_1c$Component.Description), "\\."), function(x) x[[1]])
+# df_1c$wb_reps[df_1c$wb!=FALSE] <- strsplit(gsub(" (?i)wall.*$", "\\1", df_1c$Component.Description[df_1c$wb!=FALSE])," ")
+```
 
 ```{r}
-test <- "20 minute amrap of: my butt"
-results  <- gsub(" minute.*$", "\\1", test)
-print(results)
+test <- "20 minute 10 amrap of: my butt"
+# results  <- gsub(" amrap.*$", "\\1", test)
+results <- strsplit(gsub(" amrap.*$", "\\1", test), " ")
+results[[1]][length(results[[1]])]
+tail(results[[1]],n=1)
 ```
 
