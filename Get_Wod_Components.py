@@ -6,7 +6,7 @@ def get_wod_components():
     wod_complete = list()
     while wod_component.lower() != 'done':
         wod_component = input("Enter WOD element (Example: 15 pushups)\n")
-        movement = re.sub("\d+", "", wod_component)
+        movement = re.sub("\d+| \s+", "", wod_component)
         if movement in Movements.__members__ is False:
             print("No such movement as: ", movement, "please re-enter WOD Component\n")
         else:
