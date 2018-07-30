@@ -1,0 +1,7 @@
+1, 100, ['10 pushups', '10 pullups']
+1, 10, 100, ['10 pushups']
+1, 10 minutes, 100, ['10 pushups']
+AMRAP, 10 minutes, 100 reps, ['10 pushups']
+AMRAP, 10 minutes, 100 reps, ['5 pullups', '10 pushups', '15 squats']
+RoundsForTime, 10:14, ['400 run', '15 airsquats']
+AMRAP, 10 minutes, 100 reps, ['10 pushups', '10 pullups']
