@@ -1,0 +1,23 @@
+---
+title: "test_regression"
+author: "Mikey Ling"
+date: "7/31/2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r}
+df <- read.csv('/Users/owner2/Desktop/Workbook1.csv')
+df[is.na(df)] <- 0
+```
+
+```{r}
+fit <- lm(sec.rep ~ air_squats + db_snatch + kb_swings + thrusters.95 + double_unders + wall_balls + cal_row + burpees + t2b + ring_muscle_ups + bar_muscle_ups + cleans + clean_and_jerks + deadlifts + hspu + pullups + situps + ring_dips + pushups + snatches + overhead_squats, data = df)
+summary(fit)
+plot(fit)
+```
+

@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4b12cb0d-5b89-4756-bb5e-d6f745ee20d5" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/read_wod_history.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/PerformanceResultsMetcons.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Data/PerformanceResultsMetcons.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Get_Wod_Components.py" beforeDir="false" afterPath="$PROJECT_DIR$/Get_Wod_Components.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/get_wod.py" beforeDir="false" afterPath="$PROJECT_DIR$/get_wod.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/workout_types.py" beforeDir="false" afterPath="$PROJECT_DIR$/workout_types.py" afterDir="false" />
-    </list>
+    <list default="true" id="4b12cb0d-5b89-4756-bb5e-d6f745ee20d5" name="Default" comment="added read_wod_history.py" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,11 +20,12 @@
         <counts>
           <entry key="dummy" value="5" />
           <entry key="py" value="290" />
+          <entry key="txt" value="25" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="5" />
+          <entry key="PLAIN_TEXT" value="30" />
           <entry key="Python" value="290" />
         </counts>
       </usages-collector>
@@ -117,7 +112,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="1">
     <option name="y" value="23" />
     <option name="width" value="1373" />
     <option name="height" value="1011" />
@@ -244,18 +239,26 @@
       <option name="presentableId" value="Default" />
       <updated>1532922046711</updated>
     </task>
+    <task id="LOCAL-00001" summary="added read_wod_history.py">
+      <created>1533005243634</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1533005243634</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1373" height="1011" extended-state="0" />
+    <frame x="0" y="23" width="1373" height="1011" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21036814" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.29333332" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.21109901" />
+      <window_info active="true" anchor="bottom" id="Find" order="1" visible="true" weight="0.29270947" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.21109901" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -273,6 +276,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="added read_wod_history.py" />
+    <option name="LAST_COMMIT_MESSAGE" value="added read_wod_history.py" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
