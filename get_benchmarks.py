@@ -27,6 +27,6 @@ for i in range(0, len(benchmarks)):
 
 alpha_library_entry_names = list(alpha_library.alpha_library.keys())
 file = open('Data/alpha_library.csv','a')
-file.write('movement, alpha\n')
+# file.write('movement, alpha\n')
 for i in range(0,len(alpha_library.alpha_library)):
     file.write('{}, {}\n'.format(alpha_library_entry_names[i], alpha_library.alpha_library[alpha_library_entry_names[i]]))
