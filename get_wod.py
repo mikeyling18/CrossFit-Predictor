@@ -1,6 +1,6 @@
 from workout_types import WodFormat
 from Get_Wod_Components import get_wod_components
-from movements import Movements
+import movements
 import re
 import csv
 
