@@ -74,9 +74,11 @@ for k in range(0,df_amrap.shape[0]):
     alphas_df = get_alphas()
     alpha_list = list()
     count = np.sum(np.array(alphas_df['movement'].isin(movements)))
+    movements_in_alpha_library = alphas_df['movement'][alphas_df['movement'].isin(movements)].values
+    movements_not_in_alpha_library = set(movements) ^ set(movements_in_alpha_library)
 
     # you have all movements' alphas, and now you can train/predict
-    if count == num_movements:
+    if len(movements_not_in_alpha_library) == 0:
         for movement in movements:
             alpha_temp = float(alphas_df.loc[alphas_df['movement'] == movement]['alpha'])
             reps_per_movement_df.loc[reps_per_movement_df['movement'] == movement,'alpha'] = alpha_temp
@@ -87,9 +89,9 @@ for k in range(0,df_amrap.shape[0]):
         print('error: ', error, ' wod_time: ', wod_time)
 
     # if you're only missing one movement's alpha, you can calculate it!
-    elif count == num_movements - 1:
+    elif len(movements_not_in_alpha_library) == 1:
         print('one left')
-        
+
 
 error_vs_time_df = pd.DataFrame({'WOD Time':wod_times_list, 'Error': error_list})
 

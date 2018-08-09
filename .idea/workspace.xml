@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4b12cb0d-5b89-4756-bb5e-d6f745ee20d5" name="Default" comment="added read_wod_history.py">
-      <change beforePath="$PROJECT_DIR$/.idea/WOD-Predict-master.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/WOD-Predict-master.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/alpha_library.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Data/alpha_library.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/amrap_wod_memory.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Data/amrap_wod_memory.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/predict.py" beforeDir="false" afterPath="$PROJECT_DIR$/predict.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/read_wod_history.py" beforeDir="false" afterPath="$PROJECT_DIR$/read_wod_history.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -56,6 +51,7 @@
     <session id="-284805432">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.closed" value="1" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.opened" value="1" />
         </counts>
@@ -63,29 +59,31 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="csv" value="11" />
+          <entry key="py" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSV" value="11" />
+          <entry key="Python" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="csv" value="5" />
-          <entry key="py" value="536" />
+          <entry key="csv" value="24" />
+          <entry key="py" value="976" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CSV" value="5" />
-          <entry key="Python" value="536" />
+          <entry key="CSV" value="24" />
+          <entry key="Python" value="976" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="vertical" split-proportion="0.60554886">
+    <splitter split-orientation="vertical" split-proportion="0.75630254">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
@@ -115,7 +113,7 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/movements.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="210">
+                <state relative-caret-position="206">
                   <caret line="14" column="23" lean-forward="true" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
                 </state>
               </provider>
@@ -124,8 +122,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/get_benchmarks.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="165">
-                  <caret line="16" column="33" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
+                <state relative-caret-position="231">
+                  <caret line="41" column="32" lean-forward="true" selection-start-line="41" selection-start-column="32" selection-end-line="41" selection-end-column="32" />
                   <folding>
                     <element signature="e#0#35#0" expanded="true" />
                   </folding>
@@ -136,8 +134,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/alpha_library.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state>
-                  <caret column="19" selection-start-column="19" selection-end-column="19" />
+                <state relative-caret-position="30">
+                  <caret line="2" column="9" lean-forward="true" selection-start-line="2" selection-end-line="2" selection-end-column="13" />
                 </state>
               </provider>
             </entry>
@@ -151,11 +149,11 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/read_wod_history.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="956">
-                  <caret line="80" selection-start-line="80" selection-end-line="80" />
+                <state relative-caret-position="259">
+                  <caret line="82" selection-start-line="82" selection-end-line="82" />
                   <folding>
                     <element signature="e#0#35#0" expanded="true" />
                   </folding>
@@ -163,7 +161,16 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="255">
+                  <caret line="17" selection-start-line="17" selection-end-line="17" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/predict.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="75">
@@ -197,8 +204,8 @@
               <file pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/Data/amrap_wod_memory.csv">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="30">
-                      <caret line="2" column="32" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
+                    <state>
+                      <caret column="47" selection-start-column="47" selection-end-column="47" />
                     </state>
                   </provider>
                 </entry>
@@ -239,16 +246,17 @@
         <option value="$PROJECT_DIR$/get_benchmarks.py" />
         <option value="$PROJECT_DIR$/movements.py" />
         <option value="$PROJECT_DIR$/Get_Wod_Components.py" />
-        <option value="$PROJECT_DIR$/Data/amrap_wod_memory.csv" />
         <option value="$PROJECT_DIR$/Data/alpha_library.csv" />
-        <option value="$PROJECT_DIR$/read_wod_history.py" />
         <option value="$PROJECT_DIR$/predict.py" />
+        <option value="$PROJECT_DIR$/read_wod_history.py" />
+        <option value="$PROJECT_DIR$/Data/amrap_wod_memory.csv" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
+    <option name="x" value="348" />
     <option name="y" value="23" />
-    <option name="width" value="1696" />
+    <option name="width" value="1572" />
     <option name="height" value="1012" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -430,15 +438,14 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1696" height="1012" extended-state="0" />
-    <editor active="true" />
+    <frame x="348" y="23" width="1572" height="1012" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19286577" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.090849675" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.29270947" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.35326087" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.2923913" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.15543479" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.2826087" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -451,7 +458,7 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="R Graphics" order="3" />
-      <window_info anchor="right" x="0" y="0" width="296" height="811" id="Documentation" order="4" side_tool="true" visible="true" weight="0.17110036" />
+      <window_info anchor="right" x="0" y="0" width="296" height="811" id="Documentation" order="4" side_tool="true" visible="true" weight="0.327451" />
       <window_info anchor="right" id="R Packages" order="5" />
     </layout>
   </component>
@@ -471,7 +478,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/read_wod_history.py</url>
-          <line>94</line>
+          <line>97</line>
           <option name="timeStamp" value="12" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -486,16 +493,22 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/read_wod_history.py</url>
-          <line>85</line>
+          <line>87</line>
           <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/read_wod_history.py</url>
+          <line>80</line>
+          <option name="timeStamp" value="24" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
         <watch expression="reps_per_movement_df" />
-        <watch expression="wod_df" />
-        <watch expression="error_vs_time_df" />
+        <watch expression="movements_in_alpha_library" />
+        <watch expression="movements" />
+        <watch expression="movements_not_in_alpha_library" />
       </configuration>
     </watches-manager>
   </component>
@@ -526,14 +539,6 @@
     </entry>
     <entry file="file://$USER_HOME$/anaconda2/envs/RL/lib/python3.5/site-packages/pandas/core/frame.py" />
     <entry file="file://$USER_HOME$/anaconda2/envs/RL/lib/python3.5/site-packages/pandas/core/generic.py" />
-    <entry file="file://$USER_HOME$/anaconda2/envs/RL/lib/python3.5/codecs.py" />
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/five_second_rule.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -545,16 +550,6 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://C:/Program Files (x86)/Microsoft Visual Studio/Shared/Python36_64/Lib/codecs.py" />
-    <entry file="file://$PROJECT_DIR$/get_benchmarks.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="16" column="33" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/get_wod.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -562,13 +557,6 @@
           <folding>
             <element signature="e#0#35#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Data/amrap_wod_memory.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="32" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
         </state>
       </provider>
     </entry>
@@ -586,10 +574,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/alpha_library.py">
+    <entry file="file://$PROJECT_DIR$/predict.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="19" selection-start-column="19" selection-end-column="19" />
+        <state relative-caret-position="75">
+          <caret line="5" column="36" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda2/envs/RL/lib/python3.5/site-packages/pandas/core/ops.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="116" selection-start-line="116" selection-end-line="116" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/get_benchmarks.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="41" column="32" lean-forward="true" selection-start-line="41" selection-start-column="32" selection-end-line="41" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -603,29 +611,47 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda2/envs/RL/lib/python3.5/codecs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="308" selection-start-line="308" selection-end-line="308" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/movements.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
+        <state relative-caret-position="206">
           <caret line="14" column="23" lean-forward="true" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/alpha_library.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="9" lean-forward="true" selection-start-line="2" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Data/amrap_wod_memory.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="47" selection-start-column="47" selection-end-column="47" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/read_wod_history.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="956">
-          <caret line="80" selection-start-line="80" selection-end-line="80" />
+        <state relative-caret-position="259">
+          <caret line="82" selection-start-line="82" selection-end-line="82" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/predict.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="36" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="36" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
           </folding>
         </state>
       </provider>
