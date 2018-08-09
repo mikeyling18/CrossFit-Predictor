@@ -4,8 +4,6 @@ import math
 
 
 def predict_score(wod_df, wod_time):
-    print(wod_df)
-    print(wod_time)
 
     wod_df = wod_df.assign(predicted_reps = 0)
     num_components = wod_df.shape[0]
