@@ -25,5 +25,5 @@ def get_wod_components():
                 print("No such movement as: ", movement, "please re-enter WOD Component\n")
             else:
                 # wod_complete_str = wod_complete_str + wod_component.lower() + '|'
-                wod_complete_str = wod_complete_str + reps + ' ' + movement + '|'
+                wod_complete_str = wod_complete_str + str(reps) + ' ' + movement + '|'
     # return wod_complete_str
