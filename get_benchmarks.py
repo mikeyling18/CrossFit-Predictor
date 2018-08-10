@@ -1,13 +1,6 @@
-from workout_types import WodFormat
-from Get_Wod_Components import get_wod_components
-from movements import Movements
-import re
-import csv
+
 import alpha_library
 
-
-# alpha_library.alpha_library['hi'] =alpha_library.benchmark_rep_dict['mile']
-# print(alpha_library.alpha_library)
 def get_seconds(time_str):
     m,s = time_str.split(':')
     return int(m) * 60 + int(s)

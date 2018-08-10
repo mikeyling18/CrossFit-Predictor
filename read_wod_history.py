@@ -1,12 +1,13 @@
 from workout_types import WodFormat
 
-from alpha_library import get_alphas
+import alpha_library
 import pandas as pd
 import numpy as np
 import re
 import copy
 from predict import predict_score
 from string import digits
+from one_missing_alpha import solve_alpha
 
 pd.options.mode.chained_assignment = None
 
@@ -71,7 +72,7 @@ for k in range(0,df_amrap.shape[0]):
         i += 1
 
     movements = reps_per_movement_df['movement'].values
-    alphas_df = get_alphas()
+    alphas_df = alpha_library.df_alphas
     alpha_list = list()
     count = np.sum(np.array(alphas_df['movement'].isin(movements)))
     movements_in_alpha_library = alphas_df['movement'][alphas_df['movement'].isin(movements)].values
@@ -90,8 +91,11 @@ for k in range(0,df_amrap.shape[0]):
 
     # if you're only missing one movement's alpha, you can calculate it!
     elif len(movements_not_in_alpha_library) == 1:
+        for movement in movements_in_alpha_library:
+            alpha_temp = float(alphas_df.loc[alphas_df['movement'] == movement]['alpha'])
+            reps_per_movement_df.loc[reps_per_movement_df['movement'] == movement,'alpha'] = alpha_temp
         print('one left')
-
+        solve_alpha(reps_per_movement_df, wod_time, wod_score, movements_not_in_alpha_library, reps_per_round)
 
 error_vs_time_df = pd.DataFrame({'WOD Time':wod_times_list, 'Error': error_list})
 
