@@ -11,10 +11,7 @@ from one_missing_alpha import solve_alpha
 
 pd.options.mode.chained_assignment = None
 
-df_amrap = pd.read_csv('Data/amrap_wod_memory.csv', names = ['format', 'time_limit', 'score', 'WOD'])
-df_fortime = pd.read_csv('Data/fortime_wod_memory.csv', names = ['format', 'score', 'WOD'])
 df_roundsfortime = pd.read_csv('Data/roundsfortime_wod_memory.csv', names = ['format', 'rounds', 'score', 'WOD'])
-# print(df_amrap)
 
 WOD_str = str()
 
@@ -22,11 +19,11 @@ wod_times_list = list()
 error_list = list()
 
 # print(df_amrap.iloc[k])
-for k in range(0,df_amrap.shape[0]):
-    wod_format = df_amrap.iloc[k].format
-    wod_time = df_amrap.iloc[k].time_limit
-    wod_score = df_amrap.iloc[k].score
-    WOD_str = df_amrap.iloc[k].WOD
+for k in range(0,df_roundsfortime.shape[0]):
+    wod_format = df_roundsfortime.iloc[k].format
+    # wod_time = df_roundsfortime.iloc[k].time_limit
+    wod_score = df_roundsfortime.iloc[k].score
+    WOD_str = df_roundsfortime.iloc[k].WOD
     WOD_str = WOD_str.split('|')[0:-1]
 
 

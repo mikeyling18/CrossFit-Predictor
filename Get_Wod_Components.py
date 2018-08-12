@@ -14,7 +14,7 @@ def get_wod_components():
             # wod_complete_str = wod_complete_str + wod_component.lower() + '|'
             return wod_complete_str
         else:
-            reps = int(re.search('[0-9]', wod_component).group())
+            reps = int(re.search('[0-9]+', wod_component).group())
             movement = re.sub("\d+|\s+", "", wod_component)
             if 'run' in movement:
                 movement = wod_component.lstrip(digits)

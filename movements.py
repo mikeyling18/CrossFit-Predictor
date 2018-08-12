@@ -16,7 +16,7 @@ movement_dict = {
     'situps' : 10,
     'run' : 11,
     'muscleups' : 12,
-    'deadlift' : 13,
+    'deadlifts' : 13,
     'squats' : 14,
     't2b' : 15,
     'toes2bar' : 15,

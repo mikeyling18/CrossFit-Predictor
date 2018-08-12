@@ -15,7 +15,7 @@ benchmark_rep_dict = {
 }
 
 # def get_alphas():
-df_alphas = pd.read_csv('Data/alpha_library.csv', names = ['movement', 'alpha'])
+alpha_df = pd.read_csv('Data/alpha_library.csv', names = ['movement', 'alpha'])
     # return df_alphas
 
 def update_alpha_library(movement, alpha):
