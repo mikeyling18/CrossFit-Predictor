@@ -1,5 +1,3 @@
-from workout_types import WodFormat
-
 import alpha_library
 import pandas as pd
 import numpy as np
@@ -9,9 +7,13 @@ from predict import predict_score
 from string import digits
 from one_missing_alpha import solve_alpha
 
+
 pd.options.mode.chained_assignment = None
 
+
+
 df_amrap = pd.read_csv('Data/amrap_wod_memory.csv', names = ['format', 'time_limit', 'score', 'WOD'])
+alpha_df = pd.read_csv('Data/alpha_library.csv', names = ['movement', 'alpha'])
 
 WOD_str = str()
 
@@ -69,18 +71,21 @@ for k in range(0,df_amrap.shape[0]):
         i += 1
 
     movements = reps_per_movement_df['movement'].values
-    alphas_df = alpha_library.df_alphas
+    # alphas_df = alpha_library.df_alphas
     alpha_list = list()
-    count = np.sum(np.array(alphas_df['movement'].isin(movements)))
-    movements_in_alpha_library = alphas_df['movement'][alphas_df['movement'].isin(movements)].values
+    count = np.sum(np.array(alpha_df['movement'].isin(movements)))
+    movements_in_alpha_library = alpha_df['movement'][alpha_df['movement'].isin(movements)].values
     movements_not_in_alpha_library = set(movements) ^ set(movements_in_alpha_library)
 
     # you have all movements' alphas, and now you can train/predict
     if len(movements_not_in_alpha_library) == 0:
         for movement in movements:
-            alpha_temp = float(alphas_df.loc[alphas_df['movement'] == movement]['alpha'])
+            alpha_temp = float(alpha_df.loc[alpha_df['movement'] == movement]['alpha'])
             reps_per_movement_df.loc[reps_per_movement_df['movement'] == movement,'alpha'] = alpha_temp
         predicted_score = predict_score(reps_per_movement_df, wod_time)
+
+
+
         error = (predicted_score - wod_score) / wod_score
         wod_times_list.append(wod_time)
         error_list.append(error)
@@ -89,7 +94,7 @@ for k in range(0,df_amrap.shape[0]):
     # if you're only missing one movement's alpha, you can calculate it!
     elif len(movements_not_in_alpha_library) == 1:
         for movement in movements_in_alpha_library:
-            alpha_temp = float(alphas_df.loc[alphas_df['movement'] == movement]['alpha'])
+            alpha_temp = float(alpha_df.loc[alpha_df['movement'] == movement]['alpha'])
             reps_per_movement_df.loc[reps_per_movement_df['movement'] == movement,'alpha'] = alpha_temp
         print('one left')
         solve_alpha(reps_per_movement_df, wod_time, wod_score, movements_not_in_alpha_library, reps_per_round)

@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4b12cb0d-5b89-4756-bb5e-d6f745ee20d5" name="Default" comment="added read_wod_history.py">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/BenchMark Girls.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Data/BenchMark Girls.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/alpha_library.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Data/alpha_library.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/~$BenchMark Girls.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/amrap_wod_memory.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Data/amrap_wod_memory.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/get_benchmarks.py" beforeDir="false" afterPath="$PROJECT_DIR$/get_benchmarks.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/read_amrap_wod_history.py" beforeDir="false" afterPath="$PROJECT_DIR$/read_amrap_wod_history.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -63,48 +63,55 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="csv" value="26" />
-          <entry key="py" value="28" />
+          <entry key="csv" value="28" />
+          <entry key="py" value="30" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CSV" value="26" />
-          <entry key="Python" value="28" />
+          <entry key="CSV" value="28" />
+          <entry key="Python" value="30" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="csv" value="73" />
+          <entry key="csv" value="256" />
           <entry key="dummy" value="6" />
-          <entry key="py" value="14474" />
+          <entry key="py" value="14666" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CSV" value="73" />
+          <entry key="CSV" value="256" />
           <entry key="PLAIN_TEXT" value="6" />
-          <entry key="Python" value="14474" />
+          <entry key="Python" value="14666" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="vertical" split-proportion="0.51860464">
+    <splitter split-orientation="vertical" split-proportion="0.6124031">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/Data/alpha_library.csv">
-              <provider selected="true" editor-type-id="text-editor" />
+            <entry file="file://$PROJECT_DIR$/solver.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="615">
+                  <caret line="41" column="53" lean-forward="true" selection-start-line="41" selection-start-column="53" selection-end-line="41" selection-end-column="53" />
+                  <folding>
+                    <element signature="e#0#35#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/solver.py">
+            <entry file="file://$PROJECT_DIR$/get_benchmarks.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="210">
-                  <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+                <state relative-caret-position="150">
+                  <caret line="10" selection-start-line="10" selection-end-line="10" />
                   <folding>
-                    <element signature="e#0#35#0" expanded="true" />
+                    <element signature="e#1#21#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -119,26 +126,38 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/read_amrap_wod_history.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="146">
-                  <caret line="30" column="22" lean-forward="true" selection-start-line="30" selection-start-column="22" selection-end-line="30" selection-end-column="22" />
+                <state relative-caret-position="128">
+                  <caret line="86" selection-start-line="86" selection-end-line="86" />
                   <folding>
-                    <element signature="e#0#35#0" expanded="true" />
+                    <element signature="e#0#20#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/predict.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="-7">
+                  <caret line="10" column="26" lean-forward="true" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
+                  <folding>
+                    <element signature="e#0#19#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/test.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="435">
-                  <caret line="105" selection-start-line="105" selection-end-line="105" />
+                <state relative-caret-position="135">
+                  <caret line="63" column="17" lean-forward="true" selection-start-line="63" selection-start-column="17" selection-end-line="63" selection-end-column="17" />
                   <folding>
                     <element signature="e#0#18#0" expanded="true" />
-                    <marker date="1534084139880" expanded="true" signature="1477:1743" ph="..." />
+                    <marker date="1534386787504" expanded="true" signature="1477:1751" ph="..." />
                   </folding>
                 </state>
               </provider>
@@ -147,17 +166,34 @@
         </leaf>
       </split-first>
       <split-second>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/Data/alpha_library.csv">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="134">
-                  <caret line="13" column="27" lean-forward="true" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
+        <splitter split-orientation="horizontal" split-proportion="0.5">
+          <split-first>
+            <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+              <file pinned="false" current-in-tab="true">
+                <entry file="file://$PROJECT_DIR$/Data/alpha_library.csv">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state relative-caret-position="71">
+                      <caret line="16" column="26" lean-forward="true" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+            </leaf>
+          </split-first>
+          <split-second>
+            <leaf>
+              <file pinned="false" current-in-tab="true">
+                <entry file="file://$PROJECT_DIR$/Data/amrap_wod_memory.csv">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state relative-caret-position="30">
+                      <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+            </leaf>
+          </split-second>
+        </splitter>
       </split-second>
     </splitter>
   </component>
@@ -173,11 +209,13 @@
       <find>=</find>
       <find>amrap</find>
       <find>alpha_df</find>
+      <find>alphas_df</find>
     </findStrings>
     <replaceStrings>
       <replace>:</replace>
       <replace>roundsfortime</replace>
       <replace>alpha_library.alpha_df</replace>
+      <replace>alpha_df</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -195,22 +233,23 @@
         <option value="$PROJECT_DIR$/one_missing_alpha.py" />
         <option value="$PROJECT_DIR$/movements.py" />
         <option value="$PROJECT_DIR$/Get_Wod_Components.py" />
-        <option value="$PROJECT_DIR$/read_amrap_wod_history.py" />
         <option value="$PROJECT_DIR$/Data/roundsfortime_wod_memory.csv" />
         <option value="$PROJECT_DIR$/read_roundsfortime_history.py" />
         <option value="$PROJECT_DIR$/Data/benchmark_WODs.py" />
         <option value="$PROJECT_DIR$/alpha_library.py" />
-        <option value="$PROJECT_DIR$/Data/amrap_wod_memory.csv" />
         <option value="$PROJECT_DIR$/solver.py" />
-        <option value="$PROJECT_DIR$/test.py" />
-        <option value="$PROJECT_DIR$/Data/alpha_library.csv" />
         <option value="$PROJECT_DIR$/get_benchmarks.py" />
+        <option value="$PROJECT_DIR$/Data/alpha_library.csv" />
+        <option value="$PROJECT_DIR$/Data/amrap_wod_memory.csv" />
+        <option value="$PROJECT_DIR$/read_amrap_wod_history.py" />
+        <option value="$PROJECT_DIR$/test.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
+    <option name="x" value="66" />
     <option name="y" value="23" />
-    <option name="width" value="960" />
+    <option name="width" value="1353" />
     <option name="height" value="1011" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -270,7 +309,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.get_benchmarks">
+  <component name="RunManager" selected="Python.test">
     <configuration name="get_benchmarks" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="WOD-Predict-master" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -385,9 +424,9 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.get_benchmarks" />
         <item itemvalue="Python.test" />
         <item itemvalue="Python.read_wod_history" />
+        <item itemvalue="Python.get_benchmarks" />
         <item itemvalue="Python.get_wod" />
         <item itemvalue="Python.read_roundsfortime_history" />
       </list>
@@ -415,17 +454,17 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="960" height="1011" extended-state="0" />
+    <frame x="66" y="23" width="1353" height="1011" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4988372" visible="true" weight="0.20261438" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.498708" visible="true" weight="0.14187643" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info x="0" y="0" width="296" height="811" id="Documentation" order="3" sideWeight="0.50116277" side_tool="true" visible="true" weight="0.20261438" />
+      <window_info x="0" y="0" width="296" height="811" id="Documentation" order="3" sideWeight="0.501292" side_tool="true" visible="true" weight="0.14187643" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.2923913" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.064200215" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.6148649" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.1577802" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.31664854" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -456,7 +495,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/read_amrap_wod_history.py</url>
-          <line>101</line>
+          <line>106</line>
           <option name="timeStamp" value="12" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -491,27 +530,17 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/get_benchmarks.py</url>
-          <line>242</line>
+          <line>246</line>
           <option name="timeStamp" value="44" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/read_amrap_wod_history.py</url>
-          <line>44</line>
-          <option name="timeStamp" value="47" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/read_amrap_wod_history.py</url>
-          <line>51</line>
-          <option name="timeStamp" value="48" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/get_benchmarks.py</url>
-          <line>166</line>
+          <line>170</line>
           <option name="timeStamp" value="60" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/get_benchmarks.py</url>
-          <line>229</line>
+          <line>233</line>
           <option name="timeStamp" value="62" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -529,11 +558,16 @@
           <line>105</line>
           <option name="timeStamp" value="66" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/read_amrap_wod_history.py</url>
+          <line>88</line>
+          <option name="timeStamp" value="67" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
-        <watch expression="df_roundsfortime" />
+        <watch expression="reps_per_movement_df" />
       </configuration>
     </watches-manager>
   </component>
@@ -645,17 +679,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/predict.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="36" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/alpha_library.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+          <folding>
+            <marker date="1534018654890" expanded="true" signature="385:386" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -677,13 +707,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Data/amrap_wod_memory.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Get_Wod_Components.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -696,10 +719,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/solver.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+        <state relative-caret-position="615">
+          <caret line="41" column="53" lean-forward="true" selection-start-line="41" selection-start-column="53" selection-end-line="41" selection-end-column="53" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/get_benchmarks.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+          <folding>
+            <element signature="e#1#21#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -711,36 +744,47 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="105" selection-start-line="105" selection-end-line="105" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-            <marker date="1534084139880" expanded="true" signature="1477:1743" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/get_benchmarks.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="244" column="15" lean-forward="true" selection-start-line="244" selection-start-column="15" selection-end-line="244" selection-end-column="15" />
-          <folding>
-            <element signature="e#1#21#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Data/alpha_library.csv">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="71">
+          <caret line="16" column="26" lean-forward="true" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Data/amrap_wod_memory.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/predict.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7">
+          <caret line="10" column="26" lean-forward="true" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/read_amrap_wod_history.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="146">
-          <caret line="30" column="22" lean-forward="true" selection-start-line="30" selection-start-column="22" selection-end-line="30" selection-end-column="22" />
+        <state relative-caret-position="128">
+          <caret line="86" selection-start-line="86" selection-end-line="86" />
           <folding>
-            <element signature="e#0#35#0" expanded="true" />
+            <element signature="e#0#20#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="63" column="17" lean-forward="true" selection-start-line="63" selection-start-column="17" selection-end-line="63" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+            <marker date="1534386787504" expanded="true" signature="1477:1751" ph="..." />
           </folding>
         </state>
       </provider>

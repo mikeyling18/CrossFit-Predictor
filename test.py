@@ -68,7 +68,7 @@ def objective4(x):
     pullups = x[0]
     pushups = x[1]
     squats = x[2]
-    return abs(1261.33 - (100*pullups + 150*pushups + 250*squats))
+    return eval('abs(1261.33 - (100*pullups + 150*pushups + 250*squats))')
 
 z = minimize(objective2, x0, method = 'SLSQP', bounds = bounds)
 z1 = z['x']

@@ -7,6 +7,8 @@ from string import digits
 import solver
 pd.options.mode.chained_assignment = None
 
+alpha_df = pd.DataFrame()
+
 def get_seconds(time_str):
     m,s = time_str.split(':')
     return int(m) * 60 + int(s)
@@ -14,12 +16,14 @@ def get_seconds(time_str):
 def get_run_times(df, run_time):
     alpha_800 = 2*(run_time/4.0 - 5)
     alpha_400 = alpha_800/2.0 - 5
-    alpha_200 = (alpha_400-20)/2.0
-    alpha_100 = (alpha_200-30)/2.0
+    alpha_200 = alpha_400/2.0 - 5
+    alpha_100 = alpha_200/2.0
 
     run_dict = {
         '800m run' : alpha_800,
-        '400m run' : alpha_400
+        '400m run' : alpha_400,
+        '200m run' : alpha_200,
+        '100m run' : alpha_100
     }
     # run_list = list(run_dict.keys())
     for key, value in run_dict.items():
@@ -78,7 +82,7 @@ benchmarks = ['Mile Time', '2k Row', 'Karen (150 Wall Ball For Time', 'Grace (30
 benchmark_names = ['mile', '2krow', 'karen', 'grace', 'isabel', '200du', '50calrow']
 alpha_names = ['1600m_run', '2000m_row', 'wallballs', 'cleanandjerks', 'snatches', 'doubleunders', 'calrow']
 
-alpha_df = pd.DataFrame()
+
 
 
 # Get run-related alphas
