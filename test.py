@@ -48,9 +48,7 @@ for i in range(0,3):
 
 sol_array = np.delete(sol_array,(0), axis = 0)
 print(sol_array)
-sol_array =  np.mean(sol_array, axis = 0)
-
-
+sol_array = np.mean(sol_array, axis = 0)
 
 def objective2(x):
     pullups = x[0]

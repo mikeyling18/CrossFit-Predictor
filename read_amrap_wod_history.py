@@ -6,7 +6,7 @@ import copy
 from predict import predict_score
 from string import digits
 from one_missing_alpha import solve_alpha
-
+from adjust_alpha import change_alphas
 
 pd.options.mode.chained_assignment = None
 
@@ -40,7 +40,7 @@ for k in range(0,df_amrap.shape[0]):
         movement = re.sub("\d+|\s", "", object)
         if 'run' in movement:
             movement = object.lstrip(digits)
-            movement = re.sub("\s+", "", movement)
+            movement = re.sub("^\s", "", movement)
 
         movement_tuple.append((reps,reps, movement))
 
@@ -70,8 +70,7 @@ for k in range(0,df_amrap.shape[0]):
             reps_last_round = 0
         i += 1
 
-    movements = reps_per_movement_df['movement'].values
-    # alphas_df = alpha_library.df_alphas
+    movements = np.array(np.unique(reps_per_movement_df['movement'].values))
     alpha_list = list()
     count = np.sum(np.array(alpha_df['movement'].isin(movements)))
     movements_in_alpha_library = alpha_df['movement'][alpha_df['movement'].isin(movements)].values
@@ -82,14 +81,27 @@ for k in range(0,df_amrap.shape[0]):
         for movement in movements:
             alpha_temp = float(alpha_df.loc[alpha_df['movement'] == movement]['alpha'])
             reps_per_movement_df.loc[reps_per_movement_df['movement'] == movement,'alpha'] = alpha_temp
-        predicted_score = predict_score(reps_per_movement_df, wod_time)
+        predicted_score_old_alphas = predict_score(reps_per_movement_df, wod_time)
 
+        error_old_alphas = (predicted_score_old_alphas - wod_score) / wod_score
+        new_alphas = change_alphas(reps_per_movement_df, wod_score, error_old_alphas, wod_time)
 
+        temp_df = reps_per_movement_df.copy()
+        temp_df['alpha'] = new_alphas
+        reps_per_movement_df_new_alphas = temp_df
+        predicted_score_new_alpha = predict_score(reps_per_movement_df_new_alphas, wod_time)
 
-        error = (predicted_score - wod_score) / wod_score
+        error_new_alphas = (predicted_score_new_alpha - wod_score) / wod_score
         wod_times_list.append(wod_time)
-        error_list.append(error)
-        print('error: ', error, ' wod_time: ', wod_time)
+        # error_list.append(error)
+        print('old alpha error: {}\n'
+              'old alpha predicted score: {}\n'
+              'new alpha error: {}\n'
+              'new alpha predicted score: {}\n'.format(error_old_alphas, predicted_score_old_alphas, error_new_alphas, predicted_score_new_alpha))
+
+        for movement in movements:
+            alpha_temp = float(np.mean(temp_df.loc[temp_df['movement'] == movement]['alpha']))
+            alpha_df.loc[alpha_df['movement'] == movement, 'alpha'] = alpha_temp
 
     # if you're only missing one movement's alpha, you can calculate it!
     elif len(movements_not_in_alpha_library) == 1:
@@ -99,7 +111,7 @@ for k in range(0,df_amrap.shape[0]):
         print('one left')
         solve_alpha(reps_per_movement_df, wod_time, wod_score, movements_not_in_alpha_library, reps_per_round)
 
-error_vs_time_df = pd.DataFrame({'WOD Time':wod_times_list, 'Error': error_list})
+# error_vs_time_df = pd.DataFrame({'WOD Time':wod_times_list, 'Error': error_list})
 
 print('hi')
 
