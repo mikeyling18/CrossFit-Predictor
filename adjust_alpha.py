@@ -70,7 +70,6 @@ def change_alphas(wod_df, old_score, old_error, wod_time, change_limit):
     z = minimize(objective, x0, method = 'SLSQP', bounds = bounds, constraints = cons)
     new_alphas = z['x']
 
-
     temp_df['alpha'] = new_alphas
     reps_per_movement_df_new_alphas = temp_df
     new_score = predict_score(reps_per_movement_df_new_alphas, wod_time)
@@ -79,10 +78,11 @@ def change_alphas(wod_df, old_score, old_error, wod_time, change_limit):
         new_alphas = change_alphas(wod_df, old_score, old_error, wod_time, change_limit - 0.1)
         alpha_change = x_init - new_alphas
         percent_change = np.sum(alpha_change/x_init)
+        print('old alphas: {} \n'
+              'new alphas: {} \n'
+              'change in alpha: {}'.format(list(x_init[0:num_unique_movements]), new_alphas[0:num_unique_movements],
+                                           list(alpha_change)))
+
         if percent_change < 0.10:
             return new_alphas
-    alpha_change = x_init - new_alphas
-    print('old alphas: {} \n'
-          'new alphas: {} \n'
-          'change in alpha: {}'.format(list(x_init[0:num_unique_movements]), new_alphas[0:num_unique_movements], list(alpha_change)))
     return new_alphas

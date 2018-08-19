@@ -56,7 +56,6 @@ def get_amrap_reps(df_amrap):
     reps_per_round = sum(reps_per_set_tuple)
     rounds_complete = int(wod_score / reps_per_round)
     reps_last_round = wod_score % reps_per_round
-    # reps_per_set = reps_per_set_tuple
 
     reps_per_movement_df['reps_performed'] = reps_per_movement_df['reps_performed'] * rounds_complete
     i=0
@@ -75,15 +74,6 @@ def get_amrap_reps(df_amrap):
     print('hi')
     return reps_per_movement_df
 
-
-benchmarks = ['Mile Time', '2k Row', 'Karen (150 Wall Ball For Time', 'Grace (30 C&Js @ 135)',
-              'Isabel (30 Snatches @ 135)', '200 Double Unders For Time', '50 Cal Row For Time']
-benchmark_names = ['mile', '2krow', 'karen', 'grace', 'isabel', '200du', '50calrow']
-alpha_names = ['1600m_run', '2000m_row', 'wallballs', 'cleanandjerks', 'snatches', 'doubleunders', 'calrow']
-
-
-
-
 # Get run-related alphas
 mileTime = input('What is your mile time? (mm:ss format)\n')
 seconds = get_seconds(mileTime)
@@ -97,10 +87,10 @@ alpha_cleanjerks = seconds / 30.0
 alpha_cleans = alpha_cleanjerks/1.5
 alpha_df = alpha_df.append(pd.DataFrame({'movement': ['cleanandjerks', 'cleans'], 'alpha':[alpha_cleanjerks, alpha_cleans]}))
 file = open('Data/movement_reps_and_alphas/cleanandjerks.csv','w')
-file.write('{},{}'.format(30, alpha_cleanjerks))
+file.write('{},{}\n'.format(30, alpha_cleanjerks))
 
 file = open('Data/movement_reps_and_alphas/cleans.csv', 'w')
-file.write('{},{}'.format(30, alpha_cleans))
+file.write('{},{}\n'.format(30, alpha_cleans))
 
 # Get burpee alpha
 burpee100Time = input('How fast can you do 100 burpees?\n')
@@ -108,7 +98,7 @@ seconds = get_seconds(burpee100Time)
 alpha_burpees = seconds / 100.0
 alpha_df = alpha_df.append(pd.DataFrame({'movement': ['burpees'], 'alpha': [alpha_burpees]}))
 file = open('Data/movement_reps_and_alphas/burpees.csv', 'w')
-file.write('{},{}'.format(100, alpha_burpees))
+file.write('{},{}\n'.format(100, alpha_burpees))
 
 
 # Get snatch alpha
@@ -117,7 +107,7 @@ seconds = get_seconds(isabelTime)
 alpha_snatches = seconds / 30.0
 alpha_df = alpha_df.append(pd.DataFrame({'movement': ['snatches'], 'alpha': [alpha_snatches]}))
 file = open('Data/movement_reps_and_alphas/snatches.csv', 'w')
-file.write('{},{}'.format(30, alpha_snatches))
+file.write('{},{}\n'.format(30, alpha_snatches))
 
 # Get 2k row alpha
 row2kTime = input('What is your 2k Row time?\n')
@@ -132,7 +122,7 @@ seconds = get_seconds(row50calTime)
 alpha_rowcal = seconds / 50.0
 alpha_df = alpha_df.append(pd.DataFrame({'movement': ['calrow'], 'alpha': [alpha_rowcal]}))
 file = open('Data/movement_reps_and_alphas/calrow.csv', 'w')
-file.write('{},{}'.format(50, alpha_rowcal))
+file.write('{},{}\n'.format(20, alpha_rowcal))
 
 # Get double under alpha
 duTime = input('What is your 200 Double Unders for Time score?\n')
@@ -143,9 +133,15 @@ alpha_df = alpha_df.append(pd.DataFrame({'movement': ['doubleunders'], 'alpha': 
 # Get situps alpha from Annie
 annieTime = input('What is your Annie Time? \n 50-40-30-20-10 \n Double-Unders \n Situps\n')
 seconds = get_seconds(annieTime)
-situps_alpha = (seconds - 150 * du_alpha) / 150.0
-alpha_df = alpha_df.append(pd.DataFrame({'movement': ['situps'], 'alpha': [situps_alpha]}))
+alpha_situps = (seconds - 150 * du_alpha) / 150.0
+alpha_t2b = alpha_situps
+alpha_df = alpha_df.append(pd.DataFrame({'movement': ['situps'], 'alpha': [alpha_situps]}))
 
+file = open('Data/movement_reps_and_alphas/situps.csv', 'w')
+file.write('{},{}\n'.format(30, alpha_situps))
+
+file = open('Data/movement_reps_and_alphas/toestobar.csv', 'w')
+file.write('{},{}\n'.format(30, alpha_t2b))
 # Get Pullups, Pushups, and Squats from Cindy, Angie, and Barbara
 
 cindyScore = input('What is your Cindy score?\n'
@@ -182,16 +178,16 @@ alpha_pullups, alpha_pushups, alpha_squats = solver.get_pullups_pushups_squats(c
 alpha_pistols = 1.4 * alpha_squats
 alpha_df = alpha_df.append(pd.DataFrame({'movement': ['pullups', 'pushups', 'squats', 'pistols'], 'alpha': [alpha_pullups, alpha_pushups, alpha_squats, alpha_pistols]}))
 file = open('Data/movement_reps_and_alphas/pullups.csv', 'w')
-file.write('{},{}'.format(30, alpha_pullups))
+file.write('{},{}\n'.format(30, alpha_pullups))
 
 file = open('Data/movement_reps_and_alphas/pushups.csv', 'w')
-file.write('{},{}'.format(30, alpha_pushups))
+file.write('{},{}\n'.format(30, alpha_pushups))
 
 file = open('Data/movement_reps_and_alphas/squats.csv', 'w')
-file.write('{},{}'.format(30, alpha_squats))
+file.write('{},{}\n'.format(30, alpha_squats))
 
 file = open('Data/movement_reps_and_alphas/pistols.csv', 'w')
-file.write('{},{}'.format(30, alpha_pistols))
+file.write('{},{}\n'.format(30, alpha_pistols))
 
 # Get Thruster alpha with Fran
 franTime = input('What is your Fran Time? \n 21-15-9\n Thrusters @ 95#\n Pullups\n')
@@ -199,7 +195,7 @@ fran_seconds = get_seconds(franTime)
 alpha_thruster = float((fran_seconds - 45.0 * alpha_df['alpha'].loc[alpha_df['movement'] == 'pullups']) / 45.0)
 alpha_df = alpha_df.append(pd.DataFrame({'movement': ['thrusters'], 'alpha': [alpha_thruster]}))
 file = open('Data/movement_reps_and_alphas/thrusters.csv', 'w')
-file.write('{},{},{}'.format(15, alpha_thruster, 95))
+file.write('{},{},{}\n'.format(15, alpha_thruster, 95))
 
 # Get Wallball alpha from Karen
 karenTime = input('What is your Karen Time?\n'
@@ -209,7 +205,7 @@ karen_seconds = get_seconds(karenTime)
 alpha_wallball = karen_seconds / 150.0
 alpha_df = alpha_df.append(pd.DataFrame({'movement': ['wallballs'], 'alpha':[alpha_wallball]}))
 file = open('Data/movement_reps_and_alphas/wallballs.csv', 'w')
-file.write('{},{},{}'.format(150, alpha_wallball, 20))
+file.write('{},{},{}\n'.format(150, alpha_wallball, 20))
 
 # Get Boxjumps alpha from Kelly
 kellyTime = input('What is your Kelly Time?\n'
@@ -223,7 +219,7 @@ alpha_wallball = alpha_df['alpha'].loc[alpha_df['movement'] == 'wallballs'] * 0.
 alpha_boxjumps = float((kelly_seconds - 5 * alpha_400mrun - 150 * alpha_wallball) / 150.0)
 alpha_df = alpha_df.append(pd.DataFrame({'movement': ['boxjumps'], 'alpha': [alpha_boxjumps]}))
 file = open('Data/movement_reps_and_alphas/boxjumps.csv', 'w')
-file.write('{},{},{}'.format(30, alpha_boxjumps, 24))
+file.write('{},{},{}\n'.format(30, alpha_boxjumps, 24))
 
 # Get Kettlebell Swings @ 53# with Helen
 helenTime = input('What is your Helen Time?\n'
@@ -236,7 +232,7 @@ alpha_pullups = alpha_df['alpha'].loc[alpha_df['movement'] == 'pullups']
 alpha_kbs = float((helen_seconds - 3 * alpha_400mrun - 36 * alpha_pullups) / 63.0)
 alpha_df = alpha_df.append(pd.DataFrame({'movement': ['kettlebell swings'], 'alpha': [alpha_kbs]}))
 file = open('Data/movement_reps_and_alphas/kettlebellswings.csv', 'w')
-file.write('{},{},{}'.format(21, alpha_kbs, 53))
+file.write('{},{},{}\n'.format(21, alpha_kbs, 53))
 
 nancyTime = input('What is your Nancy Time?\n'
                   '5 Rounds for Time:\n'
@@ -246,7 +242,7 @@ nancy_seconds = get_seconds(nancyTime)
 alpha_ohs = float((nancy_seconds - 5 * alpha_400mrun) / 75.0)
 alpha_df = alpha_df.append(pd.DataFrame({'movement': ['overhead squats'], 'alpha': [alpha_ohs]}))
 file = open('Data/movement_reps_and_alphas/overheadsquats.csv', 'w')
-file.write('{},{},{}'.format(15, alpha_ohs, 95))
+file.write('{},{},{}\n'.format(15, alpha_ohs, 95))
 
 amandaTime = input('What is your Amanda Time?\n'
                    'For Time:\n'
@@ -257,7 +253,7 @@ amanda_seconds = get_seconds(amandaTime)
 alpha_muscleups = float((amanda_seconds - 21*alpha_snatches) / 21.0)
 alpha_df = alpha_df.append(pd.DataFrame({'movement': 'muscleups', 'alpha': [alpha_muscleups]}))
 file = open('Data/movement_reps_and_alphas/muscleups.csv', 'w')
-file.write('{},{}'.format(7, alpha_muscleups))
+file.write('{},{}\n'.format(7, alpha_muscleups))
 
 maryScore = input('What is your Mary Score?\n'
                  '20 Minute AMRAP\n'
@@ -272,7 +268,7 @@ pullup_reps = reps['reps_performed'].iloc[2]
 alpha_hspu = float( (get_seconds('20:00') - pistol_reps * alpha_pistols - pullup_reps * alpha_pullups) / hspu_reps)
 alpha_df = alpha_df.append(pd.DataFrame({'movement': 'handstand pushups', 'alpha': [alpha_hspu]}))
 file = open('Data/movement_reps_and_alphas/handstandpushups.csv', 'w')
-file.write('{},{}'.format(5, alpha_hspu))
+file.write('{},{}\n'.format(5, alpha_hspu))
 
 # Get deadlifts @ 225 from Diane
 dianeTime = input('What is your Diane Time?\n'
@@ -283,7 +279,7 @@ diane_seconds = get_seconds(dianeTime)
 alpha_deadlifts = (diane_seconds - 45 * alpha_hspu) / 45.0
 alpha_df = alpha_df.append(pd.DataFrame({'movement': 'deadlifts', 'alpha': [alpha_deadlifts]}))
 file = open('Data/movement_reps_and_alphas/deadlifts.csv', 'w')
-file.write('{},{}'.format(15, alpha_deadlifts))
+file.write('{},{}\n'.format(15, alpha_deadlifts))
 
 print('hi')
 file = open('Data/alpha_library.csv','w')
