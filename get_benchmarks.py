@@ -1,10 +1,9 @@
-
-import alpha_library
 import pandas as pd
 import numpy as np
 import re
-from string import digits
 import solver
+from string import digits
+
 pd.options.mode.chained_assignment = None
 
 alpha_df = pd.DataFrame()

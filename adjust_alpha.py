@@ -3,20 +3,18 @@ from scipy.optimize import minimize
 import numpy as np
 import pandas as pd
 from predict import predict_score
-
-
-def change_alphas(wod_df, old_score, old_error, wod_time):
+def change_alphas(wod_df, old_score, old_error, wod_time, change_limit):
     num_unique_movements = len(np.unique(wod_df['movement']))
     x0 = wod_df['alpha']                                #old alpha values
     x_init = x0
     reps = wod_df['reps_performed']
 
     if old_error >= 0.0:
-        x0 = x0 + 0.1 * x0
+        x0 = x0 + change_limit * x0
         lower_bound = x0
-        upper_bound = x0 + 0.1 * x0
+        upper_bound = x0 + change_limit * x0
     else:
-        lower_bound = x0 - 0.1 * x0
+        lower_bound = x0 - change_limit * x0
         upper_bound = x0
 
     bounds = list()
@@ -71,9 +69,19 @@ def change_alphas(wod_df, old_score, old_error, wod_time):
 
     z = minimize(objective, x0, method = 'SLSQP', bounds = bounds, constraints = cons)
     new_alphas = z['x']
+
+
+    temp_df['alpha'] = new_alphas
+    reps_per_movement_df_new_alphas = temp_df
+    new_score = predict_score(reps_per_movement_df_new_alphas, wod_time)
+    new_error = (new_score - old_score) / old_score
+    while abs(new_error) > abs(old_error):
+        new_alphas = change_alphas(wod_df, old_score, old_error, wod_time, change_limit - 0.1)
+        alpha_change = x_init - new_alphas
+        percent_change = np.sum(alpha_change/x_init)
+        if percent_change < 0.10:
+            return new_alphas
     alpha_change = x_init - new_alphas
-    # x_init = x_init[0:num_unique_movements - 1]
-    # new_alphas = new_alphas[0:num_unique_movements - 1]
     print('old alphas: {} \n'
           'new alphas: {} \n'
           'change in alpha: {}'.format(list(x_init[0:num_unique_movements]), new_alphas[0:num_unique_movements], list(alpha_change)))
