@@ -2,20 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4b12cb0d-5b89-4756-bb5e-d6f745ee20d5" name="Default" comment="added read_wod_history.py">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/alpha_library.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Data/alpha_library.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/amrap_wod_memory.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Data/amrap_wod_memory.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/movement_reps_and_alphas/boxjumps.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Data/movement_reps_and_alphas/boxjumps.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/movement_reps_and_alphas/burpees.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Data/movement_reps_and_alphas/burpees.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/movement_reps_and_alphas/calrow.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Data/movement_reps_and_alphas/calrow.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/movement_reps_and_alphas/cleanandjerks.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Data/movement_reps_and_alphas/cleanandjerks.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/movement_reps_and_alphas/cleans.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Data/movement_reps_and_alphas/cleans.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/movement_reps_and_alphas/deadlifts.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Data/movement_reps_and_alphas/deadlifts.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/movement_reps_and_alphas/handstandpushups.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Data/movement_reps_and_alphas/handstandpushups.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/movement_reps_and_alphas/kettlebellswings.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Data/movement_reps_and_alphas/kettlebellswings.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/movement_reps_and_alphas/muscleups.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Data/movement_reps_and_alphas/muscleups.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/movement_reps_and_alphas/overheadsquats.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Data/movement_reps_and_alphas/overheadsquats.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/movement_reps_and_alphas/pistols.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Data/movement_reps_and_alphas/pistols.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/movement_reps_and_alphas/pullups.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Data/movement_reps_and_alphas/pullups.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/movement_reps_and_alphas/pushups.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Data/movement_reps_and_alphas/pushups.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/movement_reps_and_alphas/snatches.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Data/movement_reps_and_alphas/snatches.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/movement_reps_and_alphas/squats.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Data/movement_reps_and_alphas/squats.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/movement_reps_and_alphas/thrusters.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Data/movement_reps_and_alphas/thrusters.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/movement_reps_and_alphas/wallballs.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Data/movement_reps_and_alphas/wallballs.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adjust_alpha.py" beforeDir="false" afterPath="$PROJECT_DIR$/adjust_alpha.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/get_benchmarks.py" beforeDir="false" afterPath="$PROJECT_DIR$/get_benchmarks.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/get_prediction.py" beforeDir="false" afterPath="$PROJECT_DIR$/get_prediction.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/read_amrap_wod_history.py" beforeDir="false" afterPath="$PROJECT_DIR$/read_amrap_wod_history.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/solver.py" beforeDir="false" afterPath="$PROJECT_DIR$/solver.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -63,7 +69,7 @@
     <session id="-284805432">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
+          <entry key="project.closed" value="3" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.5" value="1" />
@@ -74,14 +80,14 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="csv" value="42" />
+          <entry key="csv" value="46" />
           <entry key="md" value="2" />
           <entry key="py" value="62" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CSV" value="42" />
+          <entry key="CSV" value="46" />
           <entry key="Markdown" value="2" />
           <entry key="Python" value="62" />
         </counts>
@@ -89,18 +95,18 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Python Console" value="66" />
-          <entry key="csv" value="515" />
+          <entry key="csv" value="520" />
           <entry key="dummy" value="6" />
           <entry key="md" value="395" />
-          <entry key="py" value="22641" />
+          <entry key="py" value="22652" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CSV" value="515" />
+          <entry key="CSV" value="520" />
           <entry key="Markdown" value="395" />
           <entry key="PLAIN_TEXT" value="6" />
-          <entry key="Python" value="22707" />
+          <entry key="Python" value="22718" />
         </counts>
       </usages-collector>
     </session>
@@ -109,11 +115,11 @@
     <splitter split-orientation="horizontal" split-proportion="0.601983">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/get_benchmarks.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="4215">
-                  <caret line="281" column="20" selection-start-line="281" selection-start-column="20" selection-end-line="281" selection-end-column="20" />
+                <state relative-caret-position="270">
+                  <caret line="178" lean-forward="true" selection-start-line="178" selection-end-line="178" />
                   <folding>
                     <element signature="e#0#19#0" expanded="true" />
                   </folding>
@@ -121,11 +127,38 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/Data/movement_reps_and_alphas/pullups.csv">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="15">
+                  <caret line="1" column="23" selection-start-line="1" selection-start-column="23" selection-end-line="1" selection-end-column="23" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/Data/movement_reps_and_alphas/pushups.csv">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="45">
+                  <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/Data/movement_reps_and_alphas/squats.csv">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="30">
+                  <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/solver.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="409">
-                  <caret line="59" column="24" lean-forward="true" selection-start-line="59" selection-start-column="24" selection-end-line="59" selection-end-column="24" />
+                <state relative-caret-position="148">
+                  <caret line="41" column="32" lean-forward="true" selection-start-line="41" selection-start-column="32" selection-end-line="41" selection-end-column="32" />
                   <folding>
                     <element signature="e#0#35#0" expanded="true" />
                   </folding>
@@ -151,7 +184,7 @@
             <entry file="file://$PROJECT_DIR$/test.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="330">
-                  <caret line="22" column="12" lean-forward="true" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
+                  <caret line="22" column="12" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
                   <folding>
                     <element signature="e#0#18#0" expanded="true" />
                   </folding>
@@ -162,8 +195,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/Data/movement_reps_and_alphas/snatches.csv">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="30">
-                  <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+                <state relative-caret-position="15">
+                  <caret line="1" selection-start-line="1" selection-end-line="1" />
                 </state>
               </provider>
             </entry>
@@ -182,15 +215,6 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/adjust_alpha.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="48">
-                  <caret line="27" column="21" lean-forward="true" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="21" />
-                </state>
-              </provider>
-            </entry>
-          </file>
         </leaf>
       </split-first>
       <split-second>
@@ -201,7 +225,7 @@
                 <entry file="file://$PROJECT_DIR$/Data/alpha_library.csv">
                   <provider selected="true" editor-type-id="text-editor">
                     <state relative-caret-position="195">
-                      <caret line="13" column="32" lean-forward="true" selection-start-line="13" selection-start-column="32" selection-end-line="13" selection-end-column="32" />
+                      <caret line="13" column="18" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
                     </state>
                   </provider>
                 </entry>
@@ -277,7 +301,6 @@
         <option value="$PROJECT_DIR$/Data/movement_reps_and_alphas/calrow.csv" />
         <option value="$PROJECT_DIR$/adjust_alpha.py" />
         <option value="$PROJECT_DIR$/get_prediction.py" />
-        <option value="$PROJECT_DIR$/get_benchmarks.py" />
         <option value="$PROJECT_DIR$/Data/movement_reps_and_alphas/wallballs.csv" />
         <option value="$PROJECT_DIR$/Data/movement_reps_and_alphas/muscleups.csv" />
         <option value="$PROJECT_DIR$/Data/movement_reps_and_alphas/doubleunders.csv" />
@@ -286,13 +309,17 @@
         <option value="$PROJECT_DIR$/test.py" />
         <option value="$PROJECT_DIR$/Data/amrap_wod_memory.csv" />
         <option value="$PROJECT_DIR$/solver.py" />
+        <option value="$PROJECT_DIR$/Data/movement_reps_and_alphas/squats.csv" />
+        <option value="$PROJECT_DIR$/get_benchmarks.py" />
+        <option value="$PROJECT_DIR$/Data/movement_reps_and_alphas/pullups.csv" />
+        <option value="$PROJECT_DIR$/Data/movement_reps_and_alphas/pushups.csv" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="165" />
+    <option name="x" value="292" />
     <option name="y" value="23" />
-    <option name="width" value="1755" />
+    <option name="width" value="1628" />
     <option name="height" value="1011" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -330,6 +357,12 @@
               <item name="WOD-Predict" type="462c0819:PsiDirectoryNode" />
               <item name="Data" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="WOD-Predict" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WOD-Predict" type="462c0819:PsiDirectoryNode" />
+              <item name="Data" type="462c0819:PsiDirectoryNode" />
+              <item name="movement_reps_and_alphas" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -339,7 +372,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="Errors" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -353,7 +386,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.test">
+  <component name="RunManager" selected="Python.get_benchmarks">
     <configuration name="get_benchmarks" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="WOD-Predict-master" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -468,10 +501,10 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.get_benchmarks" />
         <item itemvalue="Python.test" />
         <item itemvalue="Python.get_prediction" />
         <item itemvalue="Python.read_wod_history" />
-        <item itemvalue="Python.get_benchmarks" />
         <item itemvalue="Python.get_wod" />
       </list>
     </recent_temporary>
@@ -498,16 +531,15 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="165" y="23" width="1755" height="1011" extended-state="0" />
-    <editor active="true" />
+    <frame x="292" y="23" width="1628" height="1011" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4985591" visible="true" weight="0.17571512" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4985591" visible="true" weight="0.18978563" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info x="0" y="0" width="296" height="811" id="Documentation" order="3" show_stripe_button="false" sideWeight="0.50144094" side_tool="true" weight="0.13090129" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.28779918" weight="0.32048193" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49912435" visible="true" weight="0.27638736" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49912435" weight="0.27638736" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49970812" weight="0.31120783" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -571,23 +603,23 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/get_benchmarks.py</url>
-          <line>283</line>
+          <line>274</line>
           <option name="timeStamp" value="44" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/get_benchmarks.py</url>
-          <line>267</line>
+          <line>258</line>
           <option name="timeStamp" value="62" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/solver.py</url>
-          <line>66</line>
+          <line>60</line>
           <option name="timeStamp" value="63" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/solver.py</url>
-          <line>6</line>
-          <option name="timeStamp" value="65" />
+          <url>file://$PROJECT_DIR$/get_benchmarks.py</url>
+          <line>176</line>
+          <option name="timeStamp" value="126" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -723,7 +755,7 @@
     <entry file="file://$PROJECT_DIR$/Data/alpha_library.csv">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
-          <caret line="13" column="32" lean-forward="true" selection-start-line="13" selection-start-column="32" selection-end-line="13" selection-end-column="32" />
+          <caret line="13" column="18" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
         </state>
       </provider>
     </entry>
@@ -768,21 +800,21 @@
     <entry file="file://$PROJECT_DIR$/adjust_alpha.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="48">
-          <caret line="27" column="21" lean-forward="true" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="21" />
+          <caret line="27" column="21" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Data/movement_reps_and_alphas/snatches.csv">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+        <state relative-caret-position="15">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
-          <caret line="22" column="12" lean-forward="true" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
+          <caret line="22" column="12" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
@@ -808,16 +840,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/get_benchmarks.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4215">
-          <caret line="281" column="20" selection-start-line="281" selection-start-column="20" selection-end-line="281" selection-end-column="20" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/read_amrap_wod_history.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -830,12 +852,50 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Data/movement_reps_and_alphas/situps.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Data/movement_reps_and_alphas/pullups.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="23" selection-start-line="1" selection-start-column="23" selection-end-line="1" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Data/movement_reps_and_alphas/pushups.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Data/movement_reps_and_alphas/squats.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/solver.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="409">
-          <caret line="59" column="24" lean-forward="true" selection-start-line="59" selection-start-column="24" selection-end-line="59" selection-end-column="24" />
+        <state relative-caret-position="148">
+          <caret line="41" column="32" lean-forward="true" selection-start-line="41" selection-start-column="32" selection-end-line="41" selection-end-column="32" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/get_benchmarks.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="178" lean-forward="true" selection-start-line="178" selection-end-line="178" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
           </folding>
         </state>
       </provider>

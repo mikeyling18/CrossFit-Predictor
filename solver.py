@@ -44,24 +44,18 @@ def get_pullups_pushups_squats(cindy_score, angie_score, barbara_score):
 
     file = open('Data/movement_reps_and_alphas/pullups.csv', 'a')
     file.write('{},{}\n'
-               '{},{}\n'
                '{},{}\n'.format(5, cindy_pullup_alpha,
-                                100, angie_pullup_alpha,
-                                20, barbara_pullup_alpha))
+                                100, angie_pullup_alpha))
 
     file = open('Data/movement_reps_and_alphas/pushups.csv', 'a')
     file.write('{},{}\n'
-               '{},{}\n'
                '{},{}\n'.format(10, cindy_pushup_alpha,
-                                100, angie_pushup_alpha,
-                                30, barbara_pushup_alpha))
+                                100, angie_pushup_alpha))
 
     file = open('Data/movement_reps_and_alphas/squats.csv', 'a')
     file.write('{},{}\n'
-               '{},{}\n'
                '{},{}\n'.format(15, cindy_squat_alpha,
-                                100, angie_squat_alpha,
-                                50, barbara_squat_alpha))
+                                100, angie_squat_alpha))
 
     sol_array2 = np.array([z1,z2,z3])
     print(sol_array2)
