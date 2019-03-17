@@ -20,11 +20,16 @@ def get_wod_components():
             if 'run' in movement:
                 movement = wod_component.lstrip(digits)
                 movement = re.sub("\s+", "", movement)
+            if 'snatch' in movement:
+                movement_with_weight = wod_component.lstrip(digits)
+                movement_with_weight = movement_with_weight.replace(" ","")
 
             movement = movement.lower()
             temp = alpha_library.alpha_df['movement']
 
             if temp.str.contains(movement).any():
+                if 'snatch' in movement:
+                    movement = movement_with_weight
                 wod_complete_str = wod_complete_str + str(reps) + ' ' + movement + '|'
             else:
                 print("No such movement as: ", movement, "please re-enter WOD Component\n")
@@ -58,16 +63,22 @@ def add_wod_to_memory(new_wod):
             wod = get_wod_components()
             if new_wod:
                 score = 0
+                return [wod_format, pd.DataFrame({'format': [wod_format.name], 'time_limit': [time_limit], 'score': [score],
+                                     'WOD': [wod]}), time_limit]
             else:
                 score = int(input("Total Reps Complete?\n"))
+
         elif wod_format == WodFormat.ForTime:
             wod = get_wod_components()
             score = input("Time?\n")
+
         elif wod_format == WodFormat.RoundsForTime:
             rounds = input("How Many Rounds?\n")
             print('Rounds: ', rounds)
-
             wod = get_wod_components()
+            if new_wod:
+                score = 0
+                return [wod_format, pd.DataFrame({'format': [wod_format.name], 'score': [score], 'WOD': [wod]}), rounds]
             score = input("Time?\n")
 
         if new_wod:

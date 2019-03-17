@@ -3,7 +3,7 @@ from scipy.optimize import minimize
 import numpy as np
 import pandas as pd
 from predict import predict_score
-def change_alphas(wod_df, old_score, old_error, wod_time, change_limit):
+def change_alphas(wod_df, old_score, old_error, wod_time, change_limit, wod_format):
     num_unique_movements = len(np.unique(wod_df['movement']))
     x0 = wod_df['alpha']                                #old alpha values
     x_init = x0
@@ -36,7 +36,7 @@ def change_alphas(wod_df, old_score, old_error, wod_time, change_limit):
     def constraint1(x):
         temp_df['alpha'] = x
         reps_per_movement_df_new_alphas = temp_df
-        new_score = predict_score(reps_per_movement_df_new_alphas, wod_time)
+        new_score = predict_score([reps_per_movement_df_new_alphas, wod_time], wod_format)
         new_error = (new_score - old_score) / old_score
         if old_error >= 0.0:
             return old_error - new_error
@@ -72,10 +72,10 @@ def change_alphas(wod_df, old_score, old_error, wod_time, change_limit):
 
     temp_df['alpha'] = new_alphas
     reps_per_movement_df_new_alphas = temp_df
-    new_score = predict_score(reps_per_movement_df_new_alphas, wod_time)
+    new_score = predict_score([reps_per_movement_df_new_alphas, wod_time], wod_format)
     new_error = (new_score - old_score) / old_score
     while abs(new_error) > abs(old_error):
-        new_alphas = change_alphas(wod_df, old_score, old_error, wod_time, change_limit - 0.1)
+        new_alphas = change_alphas(wod_df, old_score, old_error, wod_time, change_limit - 0.1, wod_format)
         alpha_change = x_init - new_alphas
         percent_change = np.sum(alpha_change/x_init)
         print('old alphas: {} \n'
