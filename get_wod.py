@@ -36,11 +36,19 @@ def get_wod_components():
 
 
 def add_wod_to_memory(new_wod):
-    # new wod is a boolean that let's us know whether or not the user has performed the WOD or not
+    """
+
+    :param new_wod: boolean
+        this is used to determine whether or not the current WOD being processed already exists or not in the history
+        .csv file. NOT IMPLEMENTED YET
+    :return: List[wod_format, wod_df, time_limit] for AMRAPs
+             List[wod_format, wod_df, rounds] for RoundsForTime
+    """
     done_entering_wods = False
 
     while done_entering_wods is not True:
         # Print accepted WOD Formats
+        print('Only AMRAPs and RoundsForTime work right now...\n')
         for formats in WodFormat:
             print(re.sub(r'.*[.]', '', str(formats)))
 
@@ -68,9 +76,9 @@ def add_wod_to_memory(new_wod):
             else:
                 score = int(input("Total Reps Complete?\n"))
 
-        elif wod_format == WodFormat.ForTime:
-            wod = get_wod_components()
-            score = input("Time?\n")
+        # elif wod_format == WodFormat.ForTime:
+        #     wod = get_wod_components()
+        #     score = input("Time?\n")
 
         elif wod_format == WodFormat.RoundsForTime:
             rounds = input("How Many Rounds?\n")
@@ -81,8 +89,8 @@ def add_wod_to_memory(new_wod):
                 return [wod_format, pd.DataFrame({'format': [wod_format.name], 'score': [score], 'WOD': [wod]}), rounds]
             score = input("Time?\n")
 
-        if new_wod:
-            return pd.DataFrame({'format': [wod_format.name], 'time_limit': [time_limit], 'score': [score], 'WOD': [wod]}), time_limit
+        # if new_wod:
+        #     return pd.DataFrame({'format': [wod_format.name], 'time_limit': [time_limit], 'score': [score], 'WOD': [wod]}), time_limit
         else:
             # Ask User if the Wod is ready to be stored in CSV file
             submit = input("Submit WOD into Memory (y/n)? \n")

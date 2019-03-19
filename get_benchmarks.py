@@ -73,7 +73,29 @@ def get_amrap_reps(df_amrap):
 
     return reps_per_movement_df
 
+
 def getBenchmarks():
+    """
+    Description
+    -----------
+    Get the athlete's scores for the most common CrossFit Benchmark workouts
+
+    This function creates a .csv file for every movement that's included in the workouts. The .csv files
+    stores information in the following format:
+
+        number of reps, alpha for movement
+
+        -number of reps = avg number of reps per round of wod
+        -alpha for movement = seconds per one repetition of the movement
+
+    Parameters
+    ----------
+    none
+
+    Returns
+    -------
+    none, but it creates .csv files and saves them in the Data directory
+    """
     alpha_df = pd.DataFrame()
     # Get run-related alphas
     mileTime = input('What is your mile time? (mm:ss format)\n')

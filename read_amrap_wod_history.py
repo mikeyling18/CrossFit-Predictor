@@ -24,6 +24,15 @@ def add_reps_and_alpha(wod_df):
 
 
 def read_wods(wod_format, new_wod_df, new_wod_bool):
+    """
+    TODO:
+        1.) Edit method to work with other WOD types, like RoundsForTime
+
+    :param wod_format:
+    :param new_wod_df:
+    :param new_wod_bool:
+    :return:
+    """
     if new_wod_bool is False:
         df_amrap = pd.read_csv('Data/amrap_wod_memory.csv', names=['format', 'time_limit', 'score', 'WOD'])
     else:
@@ -127,7 +136,8 @@ def read_wods(wod_format, new_wod_df, new_wod_bool):
                     print('The following movements are NOT supported yet (Im workin on it!):\n'
                           '{}\n'.format(movements_in_alpha_library))
             skip = False
-
+    elif wod_format == WodFormat.RoundsForTime:
+        print('gimme some time...gosh\n')
 
 if __name__ == "__main__":
     read_wods('', False)
