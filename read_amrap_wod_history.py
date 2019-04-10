@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 import re
-import alpha_library
+from Unused import alpha_library
 from predict import predict_score
 from string import digits
 from adjust_alpha import change_alphas
@@ -10,10 +10,13 @@ from workout_types import WodFormat
 pd.options.mode.chained_assignment = None
 
 
-# This function adds new (reps_in_set, alpha) tuples to the respective movement's csv file
-# Input: wod_df - pd DataFrame of the WOD
-# Output: none
 def add_reps_and_alpha(wod_df):
+    """
+    This function adds a new movement and its alpha to the master library of alpha values
+
+    :param wod_df: dataframe
+    :return: None
+    """
     for index, row in wod_df.iterrows():
         reps_in_set = row.reps_in_set
         alpha = row.alpha
@@ -28,10 +31,10 @@ def read_wods(wod_format, new_wod_df, new_wod_bool):
     TODO:
         1.) Edit method to work with other WOD types, like RoundsForTime
 
-    :param wod_format:
-    :param new_wod_df:
-    :param new_wod_bool:
-    :return:
+    :param wod_format: enumeration that represents the WOD type
+    :param new_wod_df: dataframe containing WOD information
+    :param new_wod_bool: boolean that tells funcdtion if this WOD is new or not (in the library or not)
+    :return: None
     """
     if new_wod_bool is False:
         df_amrap = pd.read_csv('Data/amrap_wod_memory.csv', names=['format', 'time_limit', 'score', 'WOD'])
@@ -61,7 +64,8 @@ def read_wods(wod_format, new_wod_df, new_wod_bool):
                     movement = re.sub("^\s", "", movement)
                 temp = alpha_library.alpha_df['movement']
                 if temp.str.contains(movement).any():
-                    alpha_temp = float(alpha_library.alpha_df.loc[alpha_library.alpha_df['movement'] == movement]['alpha'])
+                    alpha_temp = float(
+                        alpha_library.alpha_df.loc[alpha_library.alpha_df['movement'] == movement]['alpha'])
                     movement_tuple.append((reps, reps, movement, alpha_temp))
                 else:
                     print('{} are not currently support\n'
@@ -92,7 +96,8 @@ def read_wods(wod_format, new_wod_df, new_wod_bool):
                     i += 1
 
                 movements = np.array(np.unique(reps_per_movement_df['movement'].values))
-                movements_in_alpha_library = alpha_library.alpha_df['movement'][alpha_library.alpha_df['movement'].isin(movements)].values
+                movements_in_alpha_library = alpha_library.alpha_df['movement'][
+                    alpha_library.alpha_df['movement'].isin(movements)].values
                 movements_not_in_alpha_library = set(movements) ^ set(movements_in_alpha_library)
 
                 # you have all movements' alphas, and now you can train/predict
@@ -138,6 +143,7 @@ def read_wods(wod_format, new_wod_df, new_wod_bool):
             skip = False
     elif wod_format == WodFormat.RoundsForTime:
         print('gimme some time...gosh\n')
+
 
 if __name__ == "__main__":
     read_wods('', False)

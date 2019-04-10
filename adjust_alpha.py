@@ -1,11 +1,24 @@
-
 from scipy.optimize import minimize
 import numpy as np
 import pandas as pd
 from predict import predict_score
+
+
 def change_alphas(wod_df, old_score, old_error, wod_time, change_limit, wod_format):
+    """
+    This function adjusts alphas in an attempt to make future predictions more accurate. The alphas are adjusted
+    based on the difference between actual and predicted WOD scores.
+
+    :param wod_df:
+    :param old_score:
+    :param old_error:
+    :param wod_time:
+    :param change_limit:
+    :param wod_format:
+    :return:
+    """
     num_unique_movements = len(np.unique(wod_df['movement']))
-    x0 = wod_df['alpha']                                #old alpha values
+    x0 = wod_df['alpha']
     x_init = x0
     reps = wod_df['reps_performed']
 
@@ -63,8 +76,8 @@ def change_alphas(wod_df, old_score, old_error, wod_time, change_limit, wod_form
             return new_score - old_score
 
     cons1 = {'type': 'ineq', 'fun': constraint1}
-    cons2 = {'type': 'ineq', 'fun': constraint2}
-    cons3 = {'type': 'ineq', 'fun': constraint3}
+    # cons2 = {'type': 'ineq', 'fun': constraint2}
+    # cons3 = {'type': 'ineq', 'fun': constraint3}
     cons = [cons1]
 
     z = minimize(objective, x0, method = 'SLSQP', bounds = bounds, constraints = cons)

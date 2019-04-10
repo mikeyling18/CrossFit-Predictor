@@ -2,7 +2,7 @@ from workout_types import WodFormat
 import re
 import pandas as pd
 from string import digits
-import alpha_library
+from Unused import alpha_library
 
 
 def get_wod_components():

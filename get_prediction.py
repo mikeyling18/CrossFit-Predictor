@@ -91,13 +91,11 @@ def new_wod_prediction():
 
 
 
-    Returns
-    -------
+    :return:
     None, but .csv files are used to store the new WOD and its results. The csv files have different formats depending
     on the format of the WOD:
         -AMRAPs -> wod format, time alloted, score, wod description
         -RoundsForTime -> wod format, rounds, score, wod description
-
     """
     wod_obj = add_wod_to_memory(new_wod=True)
     wod_format = wod_obj[0]
@@ -154,6 +152,7 @@ def new_wod_prediction():
         read_wods(wod_format, wod_df, new_wod_bool=True)
         file = open('Data/rft_wod_memory.csv', 'a')
         file.write('{}, {}, {}, {}\n'.format(wod_df.format[0], rounds, actual_score, wod_str_pre))
+
 
 if __name__ == "__main__":
     new_wod_prediction()

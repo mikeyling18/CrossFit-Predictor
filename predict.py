@@ -7,22 +7,28 @@ import copy
 from workout_types import WodFormat
 
 def get_seconds(time_str):
+    """
+    Convert a string in the format "mm:ss" into an integer number of seconds
+
+    :param time_str: string
+    :return: integer
+    """
     m,s = time_str.split(':')
     return int(m) * 60 + int(s)
 
-'''
-This function gets the predicted score of the WOD. 
-It behaves differently depending on the workout type
 
-Input: List, wod_format
-    If wod_format = AMRAP, List = [wod_df, wod_time]
-    If wod_format = RoundsForTime, List = [wod_df]
-Output: predicted_score
-
-wod_df is a dataframe that has the following columns: 
-[reps_in_set : movement : alpha]
-'''
 def predict_score(wod_obj, wod_format):
+    """
+    This function gets the predicted score of the WOD.
+    It behaves differently depending on the workout type
+
+    :param wod_obj: List[contents depends on wod_format, next line]
+    :param wod_format: List
+        If wod_format = AMRAP, List = [wod_df, wod_time]
+        If wod_format = RoundsForTime, List = [wod_df]
+
+    :return: predicted score (type depends on WOD type)
+    """
     if wod_format == WodFormat.AMRAP:
         wod_df = wod_obj[0]
         wod_time = wod_obj[1]

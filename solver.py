@@ -1,7 +1,16 @@
 from scipy.optimize import minimize
 import numpy as np
 
+
 def get_pullups_pushups_squats(cindy_score, angie_score, barbara_score):
+    """
+    This is a specially made function to get the alpha values for an athlete's pullups, pushups, and squats.
+
+    :param cindy_score: int
+    :param angie_score: str
+    :param barbara_score: str
+    :return: float, float, float - alpha_pullups, alpha_pushups, alpha_squats
+    """
     b = (1.0, 3.0)
     bounds = (b, b, b)
     x0 = [1.5, 2.0, 2.0]
@@ -36,7 +45,7 @@ def get_pullups_pushups_squats(cindy_score, angie_score, barbara_score):
     angie_pushup_alpha = z2[1]
     angie_squat_alpha = z2[2]
 
-    z = minimize(objective3, x0, method = 'SLSQP', bounds = bounds)
+    z = minimize(objective3, x0, method = 'SLSQP', bounds=bounds)
     z3 = z['x']
     barbara_pullup_alpha = z3[0]
     barbara_pushup_alpha = z3[1]
